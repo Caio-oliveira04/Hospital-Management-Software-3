@@ -262,11 +262,11 @@ class Ui_LoginFuncionario(object):
         font.setWeight(75)
         self.pushButton_medico.setFont(font)
         self.pushButton_medico.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
-"border: none;\n"
-"border-bottom: 2px solid rgb(225,225,225);\n"
-"color:rgb(225,225,225);\n"
-"padding-bottom:0.10px;\n"
-"")
+        "border: none;\n"
+        "border-bottom: 2px solid rgb(225,225,225);\n"
+        "color:rgb(225,225,225);\n"
+        "padding-bottom:0.10px;\n"
+        "")
         self.pushButton_medico.setObjectName("pushButton_medico")
         self.pushButton_paciente = QtWidgets.QPushButton(Form)
         self.pushButton_paciente.setGeometry(QtCore.QRect(620, 730, 121, 28))
@@ -275,15 +275,25 @@ class Ui_LoginFuncionario(object):
         font.setWeight(75)
         self.pushButton_paciente.setFont(font)
         self.pushButton_paciente.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
-"border: none;\n"
-"border-bottom: 2px solid rgb(225,225,225);\n"
-"color:rgb(225,225,225);\n"
-"padding-bottom:0.10px;\n"
-"")
+        "border: none;\n"
+        "border-bottom: 2px solid rgb(225,225,225);\n"
+        "color:rgb(225,225,225);\n"
+        "padding-bottom:0.10px;\n"
+        "")
         self.pushButton_paciente.setObjectName("pushButton_paciente")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
+        self.label_status_login = QtWidgets.QLabel(self.widget_2)
+        self.label_status_login.setGeometry(QtCore.QRect(35, 430, 300, 41))
+        x = QtGui.QFont()
+        x.setPointSize(8)
+        self.label_status_login.setFont(x)
+        self.label_status_login.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
+        "color: rgb(255, 0, 0);")
+        self.label_status_login.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_status_login.setObjectName("label_status_login")
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate

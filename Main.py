@@ -131,6 +131,9 @@ class LoginFuncionario (QDialog):
         retorno = servidor1._login_servidor(email, senha)
         if retorno:
             self.open_tela_funcionario()
+        else:
+            self.ui.label_status_login.setText("Email or password incorrect. Please try again.")
+
 
     def open_tela_funcionario(self):
         self.window = TelaFuncionario()
@@ -172,6 +175,9 @@ class LoginMed (QDialog):
         retorno_login = medico1._login_med(crm, senha)
         if retorno_login:
             self.open_tela_med()
+        else:
+            self.ui.label_status_login.setText("Email or password incorrect. Please try again.")
+
 
 class TelaMed(QDialog):
     

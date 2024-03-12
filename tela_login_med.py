@@ -289,7 +289,17 @@ class UI_LoginMed(object):
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
+        
+        self.label_status_login = QtWidgets.QLabel(self.widget_2)
+        self.label_status_login.setGeometry(QtCore.QRect(35, 430, 300, 41))
+        x = QtGui.QFont()
+        x.setPointSize(8)
+        self.label_status_login.setFont(x)
+        self.label_status_login.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
+        "color: rgb(255, 0, 0);")
+        self.label_status_login.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_status_login.setObjectName("label_status_login")
+        
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
