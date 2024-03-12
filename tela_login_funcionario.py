@@ -1,4 +1,3 @@
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys, imagens_rc
 
@@ -216,6 +215,26 @@ class Ui_LoginFuncionario(object):
         self.label_imagem_git.setPixmap(QtGui.QPixmap(":/imagens/icons8-github-48.png"))
         self.label_imagem_git.setScaledContents(True)
         self.label_imagem_git.setObjectName("label_imagem_git")
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.pushButton_fechar = QtWidgets.QPushButton(Form)
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 10, 30, 31))
+        self.pushButton_fechar.setFont(font)
+        self.pushButton_fechar.setObjectName("pushButton_fechar")
+        self.pushButton_fechar.setStyleSheet("""
+        QPushButton {
+            color:white;                                
+            background-color: red;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
         self.label_fundo_cadastro.raise_()
         self.label_imagem_email.raise_()
         self.label_4.raise_()
@@ -227,6 +246,7 @@ class Ui_LoginFuncionario(object):
         self.label_5.raise_()
         self.pushButton_login.raise_()
         self.label_imagem_git.raise_()
+        self.pushButton_fechar.raise_()
         self.label_logo_top = QtWidgets.QLabel(Form)
         self.label_logo_top.setGeometry(QtCore.QRect(40, -20, 181, 171))
         self.label_logo_top.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
@@ -278,6 +298,7 @@ class Ui_LoginFuncionario(object):
         self.pushButton_login.setText(_translate("Form", "ENTRAR"))
         self.pushButton_medico.setText(_translate("Form", "Medico"))
         self.pushButton_paciente.setText(_translate("Form", "Paciente"))
+        self.pushButton_fechar.setText(_translate("Form", "X"))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

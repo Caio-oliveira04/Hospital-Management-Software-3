@@ -34,6 +34,8 @@ class TelaFuncionario (QDialog):
             self.ui.pushButton_adicionar_medicamento.clicked.connect(self.cadastrar_remedio)  
             self. exibir_estoque()
             self.ui.pushButton_cadastrar_medico.clicked.connect(self.cadastrar_medico)
+            self.ui.pushButton_voltar.clicked.connect(self.voltar)
+            self.ui.pushButton_fechar.clicked.connect(self.fechar)
     
     def verificar_quartos(self):
         for index in range(self.ui.listWidget_quartos.count()):
@@ -91,13 +93,27 @@ class TelaFuncionario (QDialog):
         especialidade = self.ui.lineEdit_Especialidade.text()
         combobox = f"{especialidade} - R$ {valor}"
         servidor1.cadastro_medico(nome, combobox, senha, crm, especialidade)
+    
+    def voltar(self):
+        self.window = LoginFuncionario()
+        self.window.show()
+        self.close() 
+    
+    def fechar(self):
+        self.close()
 
 class LoginFuncionario (QDialog):
     def __init__(self, *args, **kwargs):
         super(LoginFuncionario, self).__init__(*args, **kwargs)
         self.ui = Ui_LoginFuncionario()
         self.ui.setupUi(self)
-        self.ui.pushButton_login.clicked.connect(self.login)    
+        self.ui.pushButton_login.clicked.connect(self.login)  
+        self.ui.pushButton_fechar.clicked.connect(self.fechar)
+        self.ui.pushButton_medico.clicked.connect(self.open_login_med)
+        self.ui.pushButton_paciente.clicked.connect(self.open_login_paciente)
+
+    def fechar(self):
+        self.close()  
     
     def open_login_med(self):
         self.window = LoginMed()
@@ -130,6 +146,10 @@ class LoginMed (QDialog):
         self.ui.pushButton_Paciente.clicked.connect(self.open_login_paciente)
         self.ui.pushButton_servidor.clicked.connect(self.open_login_servidor)
         self.ui.pushButton_login.clicked.connect(self.login)
+        self.ui.pushButton_fechar.clicked.connect(self.fechar)
+
+    def fechar(self):
+        self.close()  
 
     def open_login_paciente(self):
         self.window = LoginUser()
@@ -163,9 +183,11 @@ class TelaMed(QDialog):
         self.ui.pushButton_prescrever.clicked.connect(self.solicitar_exame)
         self.ui.pushButton_solicitar.clicked.connect(self.solicitar_remedio)
         self.ui.pushButton_consultar.clicked.connect(self.print_prontuario)
+        self.ui.pushButton_voltar.clicked.connect(self.voltar)
+        self.ui.pushButton_fechar.clicked.connect(self.fechar)
     
     def print_pacientes(self):
-        medico1.listar_clientes(self.ui.listWidget_pacientes)
+        medico1.listar_pacientes(self.ui.listWidget_pacientes)
     
     def solicitar_exame(self):
         paciente_selecionado = self.ui.listWidget_pacientes.selectedItems()
@@ -205,6 +227,14 @@ class TelaMed(QDialog):
             self.ui.label_remedio2.setText(segundo_remedio)
             self.ui.label_remedio3.setText(terceiro_remedio)
     
+    def voltar(self):
+        self.window = LoginMed()
+        self.window.show()
+        self.close()
+    
+    def fechar(self):
+        self.close()
+
 class LoginUser(QDialog):
     def __init__(self, *args, **kwargs):
         super(LoginUser, self).__init__(*args, **kwargs)
@@ -215,6 +245,10 @@ class LoginUser(QDialog):
         self.email = ""
         self.ui.pushButton_medico.clicked.connect(self.open_login_med)
         self.ui.pushButton_servidor.clicked.connect(self.open_login_server)
+        self.ui.pushButton_fechar.clicked.connect(self.fechar)
+
+    def fechar(self):
+        self.close()  
 
     def open_login_med(self):
         self.window = LoginMed()
@@ -268,6 +302,8 @@ class TelaUser(QDialog):
         self.ui.comboBox_especialistas.currentIndexChanged.connect(self.exibir_info_med)
         self.ui.pushButton_marcar_exame.clicked.connect(self.marcar_exame)
         self.ui.pushButton_ver_resultado.clicked.connect(self.print_resultados)
+        self.ui.pushButton_voltar.clicked.connect(self.voltar)
+        self.ui.pushButton_fechar.clicked.connect(self.fechar)
 
     def set_lista_medicos(self):
         lista = medico1.obter_todas_combobox()
@@ -350,6 +386,14 @@ class TelaUser(QDialog):
             exame = item.text()
             resultado = usuario1.get_resultado_exame(self.email, exame)
             self.ui.label_ver_resultados.setText(resultado)
+    
+    def voltar(self):
+        self.window = LoginUser()
+        self.window.show()
+        self.close()
+    
+    def fechar(self):
+        self.close()
 
 app = QApplication(sys.argv)
 if (QDialog.Accepted == True):

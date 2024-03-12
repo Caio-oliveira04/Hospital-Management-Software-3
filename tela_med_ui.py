@@ -204,7 +204,42 @@ class UI_TelaMed(object):
         self.label_remedio2.setGeometry(QtCore.QRect(650, 450, 421, 41))
         self.label_remedio2.setStyleSheet("background-color: qconicalgradient(cx:0.56, cy:1, angle:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
         self.label_remedio2.setObjectName("label_result2")
-        
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.pushButton_voltar = QtWidgets.QPushButton(Form)
+        self.pushButton_voltar.setGeometry(QtCore.QRect(5, 745, 80, 31))
+        self.pushButton_voltar.setFont(font)
+        self.pushButton_voltar.setObjectName("pushButton_voltar")
+        self.pushButton_voltar.setStyleSheet("""
+        QPushButton {
+            background-color: white;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+        self.pushButton_fechar = QtWidgets.QPushButton(Form)
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 745, 30, 31))
+        self.pushButton_fechar.setFont(font)
+        self.pushButton_fechar.setObjectName("pushButton_fechar")
+        self.pushButton_fechar.setStyleSheet("""
+        QPushButton {
+            color:white;                                
+            background-color: red;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+
         self.pushButton_enviar.raise_()
         self.label_5.raise_()
         self.listWidget_pacientes.raise_()
@@ -233,7 +268,8 @@ class UI_TelaMed(object):
         self.widget.raise_()
         self.label.raise_()
         self.label_logo.raise_()
-
+        self.pushButton_voltar.raise_()
+        self.pushButton_fechar.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -263,6 +299,8 @@ class UI_TelaMed(object):
         self.pushButton_enviar.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:6pt;\">Ocupado</span></p></body></html>"))
         self.pushButton_enviar.setWhatsThis(_translate("Form", "<html><head/><body><p><span style=\" font-size:6pt;\">Ocupado</span></p></body></html>"))
         self.pushButton_enviar.setText(_translate("Form", "Enviar"))
+        self.pushButton_voltar.setText(_translate("Form", "<-- Voltar"))
+        self.pushButton_fechar.setText(_translate("Form", "X"))
 
        
 if __name__ == "__main__":

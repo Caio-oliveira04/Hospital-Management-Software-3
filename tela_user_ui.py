@@ -307,6 +307,43 @@ class Ui_TelaUser(object):
         self.pushButton_depositar = QtWidgets.QPushButton(Form)
         self.pushButton_depositar.setGeometry(QtCore.QRect(1090, 50, 61, 31))
         font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.pushButton_voltar = QtWidgets.QPushButton(Form)
+        self.pushButton_voltar.setGeometry(QtCore.QRect(5, 745, 80, 31))
+        self.pushButton_voltar.setFont(font)
+        self.pushButton_voltar.setObjectName("pushButton_voltar")
+        self.pushButton_voltar.setStyleSheet("""
+        QPushButton {
+            background-color: white;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+        self.pushButton_fechar = QtWidgets.QPushButton(Form)
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 745, 30, 31))
+        self.pushButton_fechar.setFont(font)
+        self.pushButton_fechar.setObjectName("pushButton_fechar")
+        self.pushButton_fechar.setStyleSheet("""
+        QPushButton {
+            color:white;                                
+            background-color: red;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+
+
+        font = QtGui.QFont()
         font.setPointSize(6)
         self.pushButton_depositar.setFont(font)
         self.pushButton_depositar.setStyleSheet("QPushButton#pushButton_depositar {\n"
@@ -327,6 +364,8 @@ class Ui_TelaUser(object):
 "QPushButton#pushButton_depositar { \n"
 "    color: rgb(0, 0, 0);\n"
 "}")
+
+
         self.pushButton_depositar.setObjectName("pushButton_depositar")
         self.lineEdit_valor_deposito = QtWidgets.QLineEdit(Form)
         self.lineEdit_valor_deposito.setGeometry(QtCore.QRect(870, 50, 211, 31))
@@ -372,6 +411,9 @@ class Ui_TelaUser(object):
         self.label_saldo.raise_()
         self.pushButton_depositar.raise_()
         self.lineEdit_valor_deposito.raise_()
+        self.pushButton_voltar.raise_()
+        self.pushButton_fechar.raise_()
+
         self.crm = ''
         self.nome = ''
         self.especialidade = ''
@@ -429,6 +471,9 @@ class Ui_TelaUser(object):
         self.listWidget_feitos.setSortingEnabled(False)
         self.listWidget_feitos.setSortingEnabled(__sortingEnabled)
         self.lineEdit_valor_deposito.setPlaceholderText(_translate("Form", "VALOR P/ DEPOSITAR"))
+        self.pushButton_voltar.setText(_translate("Form", "<-- Voltar"))
+        self.pushButton_fechar.setText(_translate("Form", "X"))
+
    
 
 if __name__ == "__main__":

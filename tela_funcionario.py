@@ -5,7 +5,8 @@ import sys, imagens_rc
 class Ui_TelaServidor(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1227, 778)
+        Form.resize(1227, 798)
+        Form.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(True)
@@ -412,13 +413,49 @@ class Ui_TelaServidor(object):
 "background-color: rgba(0, 0, 0, 0);")
         self.label_txt.setText("")
         self.label_txt.setObjectName("label_txt")
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.pushButton_voltar = QtWidgets.QPushButton(Form)
+        self.pushButton_voltar.setGeometry(QtCore.QRect(5, 765, 80, 31))
+        self.pushButton_voltar.setFont(font)
+        self.pushButton_voltar.setObjectName("pushButton_voltar")
+        self.pushButton_voltar.setStyleSheet("""
+        QPushButton {
+            background-color: white;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+        self.pushButton_fechar = QtWidgets.QPushButton(Form)
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 765, 30, 31))
+        self.pushButton_fechar.setFont(font)
+        self.pushButton_fechar.setObjectName("pushButton_fechar")
+        self.pushButton_fechar.setStyleSheet("""
+        QPushButton {
+            color:white;                                
+            background-color: red;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
         self.label.raise_()
         self.label_logo_top.raise_()
         self.widget.raise_()
         self.widget_2.raise_()
         self.widget_4.raise_()
         self.widget_5.raise_()
-
+        self.pushButton_voltar.raise_()
+        self.pushButton_fechar.raise_()
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -493,6 +530,8 @@ class Ui_TelaServidor(object):
         self.lineEdit_nome_escala.setPlaceholderText(_translate("Form", "Nome"))
         self.pushButton_adicionar_medicamento.setText(_translate("Form", "Adicionar"))
         self.label_text_remed.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600;\">Estoque de remedios</span></p></body></html>"))
+        self.pushButton_voltar.setText(_translate("Form", "<-- Voltar"))
+        self.pushButton_fechar.setText(_translate("Form", "X"))
 
 
 if __name__ == "__main__":

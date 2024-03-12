@@ -143,6 +143,27 @@ class UI_LoginUser(object):
 "    border: 1px solid rgba(233, 226, 226, 0.35);")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.pushButton_fechar = QtWidgets.QPushButton(Form)
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 10, 30, 31))
+        self.pushButton_fechar.setFont(font)
+        self.pushButton_fechar.setObjectName("pushButton_fechar")
+        self.pushButton_fechar.setStyleSheet("""
+        QPushButton {
+            color:white;                                
+            background-color: red;
+            border-radius:8px;
+        }
+        QPushButton:hover {
+            background-color: #EEEEEE; 
+        }
+        QPushButton:pressed {
+            background-color: #DDDDDD;
+        }""")
+
         self.label_imagem_login.raise_()
         self.label_imagem_sobreposicao.raise_()
         self.pushButton_login.raise_()
@@ -153,6 +174,7 @@ class UI_LoginUser(object):
         self.label_text_login.raise_()
         self.label_4.raise_()
         self.label_5.raise_()
+        self.pushButton_fechar.raise_()
         self.widget_2 = QtWidgets.QWidget(Form)
         self.widget_2.setGeometry(QtCore.QRect(500, 150, 531, 541))
         self.widget_2.setStyleSheet("background-color: rgba(0, 0, 0,0);\n"
@@ -367,7 +389,10 @@ class UI_LoginUser(object):
 "color: rgb(255, 0, 0);")
         self.label_status_login.setAlignment(QtCore.Qt.AlignCenter)
         self.label_status_login.setObjectName("label_status_login")
-
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
         self.pushButton_medico = QtWidgets.QPushButton(Form)
         self.pushButton_medico.setGeometry(QtCore.QRect(480, 730, 121, 28))
         self.pushButton_medico.setFont(font)
@@ -378,7 +403,10 @@ class UI_LoginUser(object):
 "padding-bottom:0.10px;\n"
 "")
         self.pushButton_medico.setObjectName("pushButton_medico")
-        
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
         self.pushButton_servidor = QtWidgets.QPushButton(Form)
         self.pushButton_servidor.setGeometry(QtCore.QRect(620, 730, 121, 28))
         self.pushButton_servidor.setFont(font)
@@ -409,6 +437,7 @@ class UI_LoginUser(object):
         self.lineEdit_senha_cadatre.setPlaceholderText(_translate("Form", "S E N H A "))
         self.pushButton_medico.setText(_translate("Form", "Medico"))
         self.pushButton_servidor.setText(_translate("Form", "Servidor"))
+        self.pushButton_fechar.setText(_translate("Form", "X"))
 
 
 if __name__ == "__main__":
