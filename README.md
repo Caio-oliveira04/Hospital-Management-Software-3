@@ -55,24 +55,34 @@ Version with a graphical interface, elements of the object-oriented paradigm, an
 
 * **Caio Oliveira França dos Anjos**
 
-## 📄 Implementations
-1. **~~Patient Registration~~**
-2. **~~Appointment Scheduling~~**
-3. **~~Medical Record Management~~**
-4. **~~Billing and Invoicing~~**
-5. **~~Prescription Management~~**
-6. **~~Lab Test Ordering and Reporting~~**
-7. **~~Ward and Bed Management~~**
-8. **~~Inventory Management~~**
-9. **~~Staff Scheduling~~**
-10. **Emergency Services Management**, I couldn't see how this functionality would be inserted into the program, as the software is not focused on the urgent and emergency area of a hospital, but rather on scheduling appointments and exams.
-
 ## 🚀 Future Improvements
 
 - Add automated tests to ensure software stability.
 - Consider adding new functionalities based on community feedback.
 - Enhance the graphical interface by implementing a dialog system to indicate errors.
 
+## User Screen
+This should be the first screen when running the program. In the image, two buttons are highlighted that will switch between screens.
+![imagem login](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/aa63e268-21e0-41c6-bbe6-e7428bced1fd)
+
+- Para make an appointment: you must choose a specialist, make the deposit in the amount of the consultation indicated next to the specialist's name, choose the date, and then schedule. Once scheduled, you can view them in the scheduled appointments field, and select one to reschedule (if you wish, you must choose the new date and then click on reschedule), if you want to cancel, just select the appointment and click on cancel. 
+
+- The requested exams will only be displayed on your profile if the doctor requests an exam for you. Once requested, you can select the one you want, and it will automatically go to your list of completed exams, where you can see the result.
+![image](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/1d7611b1-4e99-4f63-8a3b-2b1f92b2c2c6)
+
+## Doctor screen
+- Note that the login parameters are different, use the information provided in the "Running the tests" section
+![image](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/0f7bc719-d92b-44e4-b3ec-5ec989878d5c)
+
+-To consult a person, you can select one from the list, and see their medical record, and then make the decision to request an exam or medicine and click on the button to the right of the list. (the field for sending observation is not yet included in this update).
+![image](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/ace000f2-37d3-479a-b6c4-ffcba592c6db)
+
+## Server screen
+- Use the information provided in the "Running the tests" section
+![image](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/e12c8096-a049-4bb2-ba01-589c28aaae81)
+
+-in this section, you can reserve rooms, or vacate them, add or view your stock, register doctors, and create a work schedule (field still under development).
+![image](https://github.com/Caio-oliveira04/Hospital-Management-Software-3/assets/131555188/2359f9c3-b7d9-46d3-8185-00b7b1b83b19)
 
 
 
