@@ -302,11 +302,11 @@ class Ui_LoginFuncionario(object):
         self.label_text_login_3.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:7pt;\">Obrigado por fazer parte da equipe </span></p><p><span style=\" font-size:9pt;\">Medical Center New Life</span></p></body></html>"))
         self.label_nome_git.setText(_translate("Form", "\n"
 "Caio-oliveira04"))
-        self.label_text_login.setText(_translate("Form", "<html><head/><body><p align=\"center\">L O G I N</p><p align=\"center\"><span style=\" font-size:6pt;\">funcionarios</span></p></body></html>"))
+        self.label_text_login.setText(_translate("Form", "<html><head/><body><p align=\"center\">L O G I N</p><p align=\"center\"><span style=\" font-size:6pt;\">Servidor</span></p></body></html>"))
         self.lineEdit_senha_login.setPlaceholderText(_translate("Form", "S E N H A "))
         self.lineEdit_email_login.setPlaceholderText(_translate("Form", "E M A I L"))
         self.pushButton_login.setText(_translate("Form", "ENTRAR"))
-        self.pushButton_medico.setText(_translate("Form", "Medico"))
+        self.pushButton_medico.setText(_translate("Form", "Médico"))
         self.pushButton_paciente.setText(_translate("Form", "Paciente"))
         self.pushButton_fechar.setText(_translate("Form", "X"))
 

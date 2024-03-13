@@ -440,7 +440,7 @@ class Ui_TelaUser(object):
         self.especialidade = especialidade
 
     def print(self):
-        self.label_text_info_medico.setText(f"Crm: {self.crm}\n\nNome: {self.nome}\n\nEspecialidade: {self.especialidade}")
+        self.label_text_info_medico.setText(f"CRM: {self.crm}\n\nNome: {self.nome}\n\nEspecialidade: {self.especialidade}")
     
     def set_lista_medicos(self, lista):
         self.lista_medicos = lista

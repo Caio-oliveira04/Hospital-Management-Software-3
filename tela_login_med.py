@@ -307,7 +307,7 @@ class UI_LoginMed(object):
         self.label_text_login_3.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:7pt;\">Obrigado por fazer parte da equipe </span></p><p><span style=\" font-size:9pt;\">Medical Center New Life</span></p></body></html>"))
         self.label_nome_git.setText(_translate("Form", "\n"
 "Caio-oliveira04"))
-        self.label_text_login.setText(_translate("Form", "<html><head/><body><p align=\"center\">L O G I N</p><p align=\"center\"><span style=\" font-size:6pt;\">Medico</span></p></body></html>"))
+        self.label_text_login.setText(_translate("Form", "<html><head/><body><p align=\"center\">L O G I N</p><p align=\"center\"><span style=\" font-size:6pt;\">Médico</span></p></body></html>"))
         self.lineEdit_senha_login.setPlaceholderText(_translate("Form", "S E N H A "))
         self.lineEdit_email_login.setPlaceholderText(_translate("Form", "C R M"))
         self.pushButton_login.setText(_translate("Form", "ENTRAR"))

@@ -435,7 +435,7 @@ class UI_LoginUser(object):
         self.label_nome_git.setText(_translate("Form", "\n"
 "Caio-oliveira04"))
         self.lineEdit_senha_cadatre.setPlaceholderText(_translate("Form", "S E N H A "))
-        self.pushButton_medico.setText(_translate("Form", "Medico"))
+        self.pushButton_medico.setText(_translate("Form", "Médico"))
         self.pushButton_servidor.setText(_translate("Form", "Servidor"))
         self.pushButton_fechar.setText(_translate("Form", "X"))
 

@@ -12,8 +12,9 @@ Additionally, you need to have Python installed on your system.
 
 So, the prerequisites to run the project are:
 
-Installed Python
-Installed PyQt5
+* Installed Python
+
+* Installed PyQt5
 
 ## 🛠️ Built with
 
@@ -33,13 +34,17 @@ With PyQt5 properly installed and the project directory open in the Command Prom
 To access the doctor's functionalities, make sure you're on the doctor login screen. For testing purposes, there is already a doctor registered with the following credentials:
 
 CRM : 123456-SP
+
 Password: 123
+
 However, you can also register a doctor through the server functionalities.
 
 To access server functionalities, in this case, a manager, use the following login:
 
 Email: gerente@gmail.com
+
 Password: 123
+
 This way, you can test the options available for a manager.
 
 ## 📌 Version
@@ -50,7 +55,7 @@ Version with a graphical interface, elements of the object-oriented paradigm, an
 
 * **Caio Oliveira França dos Anjos**
 
-📄 Implementations
+## 📄 Implementations
 1. **~~Patient Registration~~**
 2. **~~Appointment Scheduling~~**
 3. **~~Medical Record Management~~**
