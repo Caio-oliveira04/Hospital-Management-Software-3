@@ -332,7 +332,7 @@ class Ui_TelaUser(object):
             background-color: #DDDDDD;
         }""")
         self.pushButton_fechar = QtWidgets.QPushButton(Form)
-        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 745, 30, 31))
+        self.pushButton_fechar.setGeometry(QtCore.QRect(1190, 5, 30, 31))
         self.pushButton_fechar.setFont(font)
         self.pushButton_fechar.setObjectName("pushButton_fechar")
         self.pushButton_fechar.setStyleSheet("""

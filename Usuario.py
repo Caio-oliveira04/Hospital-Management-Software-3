@@ -412,7 +412,7 @@ class Usuario:
 
             if usuario:
                 exames_feitos = usuario.get("Exame_feitos", [])
-                primeiros_resultados = ["Sem resultado anteriores"] * 3 
+                primeiros_resultados = ["Sem resultados anteriores"] * 3 
 
                 for i, exame_feito in enumerate(exames_feitos):
                     if i < 3:
