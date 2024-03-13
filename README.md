@@ -4,7 +4,16 @@ This is a project for the "Software Project" course. The software aims to provid
 
 ### 📋 Prerequisites
 
-The only prerequisite to run the project is to have Python installed, as the libraries used are native to Python.
+Before running the project, make sure you have PyQt5 installed, which is the library used to develop the graphical interface. You can install it using pip, the Python package manager, with the following command:
+  
+  - [$ pip install PyQt5]
+
+Additionally, you need to have Python installed on your system. 
+
+So, the prerequisites to run the project are:
+
+Installed Python
+Installed PyQt5
 
 ## 🛠️ Built with
 
@@ -14,14 +23,16 @@ The only prerequisite to run the project is to have Python installed, as the lib
 * [Visual Studio Code](https://code.visualstudio.com/) - Integrated Development Environment (IDE)
   - [Visual Studio Code Installation Guide](https://code.visualstudio.com/download/)
 
+* [PyQt5](https://pypi.org/project/PyQt5/) - Library for developing graphical interfaces in Python
+  - [$ pip install PyQt5]
 
 ## ⚙️ Running the tests
 
-With the project directory open in the Command Prompt, type "python Main.py" and follow the information presented in the terminal. To test user functionalities, simply choose the corresponding option in the main menu. After that, register or log in and explore the available options for a user.
+With PyQt5 properly installed and the project directory open in the Command Prompt, type "python Main.py", or execute the Main file using the "run" button in Visual Studio Code. To test user functionalities, sign up and explore the available options for the user.
 
-To access doctor functionalities, make sure you are on the program's home screen and choose the option related to the doctor. Next, the login screen will appear. For testing purposes, there is already a registered doctor with the following credentials:
+To access the doctor's functionalities, make sure you're on the doctor login screen. For testing purposes, there is already a doctor registered with the following credentials:
 
-Email: med_teste@gmail.com
+CRM : 123456-SP
 Password: 123
 However, you can also register a doctor through the server functionalities.
 
@@ -33,7 +44,7 @@ This way, you can test the options available for a manager.
 
 ## 📌 Version
 
-Simple version, for the first evaluation that will compose AB1, of the discipline: Software Project
+Version with a graphical interface, elements of the object-oriented paradigm, and the 'Facade' design pattern.
 
 ## ✒️ Authors
 
@@ -55,6 +66,7 @@ Simple version, for the first evaluation that will compose AB1, of the disciplin
 
 - Add automated tests to ensure software stability.
 - Consider adding new functionalities based on community feedback.
+- Enhance the graphical interface by implementing a dialog system to indicate errors.
 
 
 

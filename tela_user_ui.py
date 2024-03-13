@@ -140,12 +140,18 @@ class Ui_TelaUser(object):
         font.setWeight(50)
         item.setFont(font)
         self.dateEdit_par_remarcar = QtWidgets.QDateEdit(Form)
+        self.dateEdit_par_remarcar.setCalendarPopup(True)
         self.dateEdit_par_remarcar.setGeometry(QtCore.QRect(1010, 180, 141, 41))
+
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
+        min_date = QDate(2024, 1, 1)
+        initial_date = QDate(2024, 1, 1)
+        self.dateEdit_par_remarcar.setDate(initial_date)
+        self.dateEdit_par_remarcar.setMinimumDate(min_date)
         self.dateEdit_par_remarcar.setFont(font)
-        self.dateEdit_par_remarcar.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(184, 255, 184, 255), stop:1 rgba(89, 124, 89, 255));")
+        self.dateEdit_par_remarcar.setStyleSheet("background-color: white; color: black")
         self.dateEdit_par_remarcar.setObjectName("dateEdit_par_remarcar")
         self.pushButton_remarcar = QtWidgets.QPushButton(Form)
         self.pushButton_remarcar.setGeometry(QtCore.QRect(1010, 230, 141, 28))
@@ -397,7 +403,6 @@ class Ui_TelaUser(object):
         self.label_fundo_cadastro.raise_()
         self.label_text_marcadas.raise_()
         self.listWidget_marcadas.raise_()
-        self.dateEdit_par_remarcar.raise_()
         self.pushButton_remarcar.raise_()
         self.pushButton_desmarcar.raise_()
         self.label_text_solicitados.raise_()
@@ -413,6 +418,7 @@ class Ui_TelaUser(object):
         self.lineEdit_valor_deposito.raise_()
         self.pushButton_voltar.raise_()
         self.pushButton_fechar.raise_()
+        self.dateEdit_par_remarcar.raise_()
 
         self.crm = ''
         self.nome = ''

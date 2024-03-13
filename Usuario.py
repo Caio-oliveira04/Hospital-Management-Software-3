@@ -33,14 +33,14 @@ class Usuario:
                 return usuario["Saldo"]
             else:
                 print(f"Usuário com o email {email} não encontrado.")
-                return None  # ou levante uma exceção, dependendo dos requisitos
+                return None  
 
         except FileNotFoundError:
             print(f'Arquivo não encontrado: {self.CLIENTES_FILE}')
-            return None  # ou levante uma exceção, dependendo dos requisitos
+            return None 
         except Exception as e:
             print(f'Erro ao obter saldo: {e}')
-            return None  # ou levante uma exceção, dependendo dos requisitos
+            return None  
 
     def cadastro_user(self, nome, email, senha):
         try:
@@ -55,7 +55,7 @@ class Usuario:
                 "Exame_feitos": [],
                 "Remedios_receitados": [],
                 "Remedios_comprados": [],
-                "Observacoes": ["Sem observações anteriores"] * 3  # Initialize with 3 values
+                "Observacoes": ["Sem observações anteriores"] * 3  
             }
             dados.append(novo_usuario)
             db._salvar_dados(self.CLIENTES_FILE, dados)
@@ -111,18 +111,13 @@ class Usuario:
         except Exception as e:
             print(f'Erro ao marcar a consulta: {e}')
 
-    def remarcar_consulta(self):
+    def remarcar_consulta(self, email, data_antiga, nova_data):
         try:
             dados = db._carregar_dados(self.CLIENTES_FILE)
 
-            email = input("Digite seu email: ")
             usuario, index = db._buscar_usuario_por_email(email, dados)
 
             if usuario:
-                self.print_consultas_marcadas(email)
-                data_antiga = input('Digite a data a ser alterada: ')
-                nova_data = input('Digite a nova data para a consulta: ')
-
                 consultas = usuario.get("Consultas", [])
                 encontrada = False
 
@@ -270,7 +265,6 @@ class Usuario:
             listWidget_marcadas.clear()
             dados = db._carregar_dados(self.CLIENTES_FILE)
 
-            email = email
             usuario, _ = db._buscar_usuario_por_email(email, dados)
 
             if usuario:

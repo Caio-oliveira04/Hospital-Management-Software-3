@@ -20,8 +20,8 @@ class UsuarioFacade:
     def marcar_consulta(self, email, comboBox, data):
         return self.usuario.marcar_consulta(email, comboBox, data)
 
-    def remarcar_consulta(self):
-        return self.usuario.remarcar_consulta()
+    def remarcar_consulta(self, email, data_antiga, nova_data):
+        return self.usuario.remarcar_consulta(email, data_antiga, nova_data)
 
     def desmarcar_consulta(self, email, data_antiga):
         return self.usuario.desmarcar_consulta(email, data_antiga)

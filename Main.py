@@ -310,6 +310,7 @@ class TelaUser(QDialog):
         self.ui.pushButton_ver_resultado.clicked.connect(self.print_resultados)
         self.ui.pushButton_voltar.clicked.connect(self.voltar)
         self.ui.pushButton_fechar.clicked.connect(self.fechar)
+        self.ui.pushButton_remarcar.clicked.connect(self.remarcar)
 
     def set_lista_medicos(self):
         lista = medico1.obter_todas_combobox()
@@ -400,6 +401,16 @@ class TelaUser(QDialog):
     
     def fechar(self):
         self.close()
+    
+    def remarcar(self):
+        consulta_selecionada = self.ui.listWidget_marcadas.selectedItems()
+        for item in consulta_selecionada:
+            consulta = item.text()
+            partes = consulta.split()
+            data_antiga = partes[1]
+            nova_data = self.ui.dateEdit_par_remarcar.date().toString('dd/MM/yyyy')
+            usuario1.remarcar_consulta(self.email, data_antiga, nova_data)
+            self.exibir_consultas_marcadas()
 
 app = QApplication(sys.argv)
 if (QDialog.Accepted == True):
